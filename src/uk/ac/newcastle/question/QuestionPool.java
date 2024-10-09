@@ -10,7 +10,7 @@ import java.util.Set;
  * @param:
  * @return:
  */
-public class QuestionPool {
+public class QuestionPool{
     
     private static final Set<Question> questions = new HashSet<>();
     

@@ -2,7 +2,7 @@ package uk.ac.newcastle.question;
 
 import java.util.*;
 
-public abstract class QuestionFactory implements Question{
+public class QuestionFactory{
     
     public static final String FREE_RESPONSE_QUESTION = "free_response:";
     
