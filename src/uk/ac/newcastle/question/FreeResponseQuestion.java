@@ -35,7 +35,7 @@ public class FreeResponseQuestion implements Question{
     public boolean isCorrectNumber(String answer) {
         //req1: ignore case
         //req2: treat multiple joint whitespaces as a single whitespace
-        return this.correctAnswer.equalsIgnoreCase(answer.trim().replace("\\s+"," "));
+        return this.correctAnswer.equalsIgnoreCase(answer.trim().replaceAll("\\s+"," "));
     }
     
     public String getCorrectAnswer() {
