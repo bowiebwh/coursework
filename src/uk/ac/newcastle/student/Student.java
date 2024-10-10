@@ -92,9 +92,9 @@ public class Student {
         return statistics.getFinalVerdict() == Statistics.Verdict.FAIL;
     }
 
-    public String toString() {
+    /*public String toString() {
         return "Student{firstName = " + firstName + ", lastName = " + lastName + ", dateOfBirth = " + dateOfBirth + "}";
-    }
+    }*/
 
     @Override
     public boolean equals(Object o) {

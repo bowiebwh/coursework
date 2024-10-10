@@ -37,10 +37,6 @@ public class FreeResponseQuestion implements Question{
         //req2: treat multiple joint whitespaces as a single whitespace
         return this.correctAnswer.equalsIgnoreCase(answer.trim().replaceAll("\\s+"," "));
     }
-    
-    public String getCorrectAnswer() {
-        return correctAnswer;
-    }
 
     //Override hashCode to generate hash based on the formulation
     @Override
@@ -48,7 +44,7 @@ public class FreeResponseQuestion implements Question{
         return formulation.toLowerCase().hashCode();
     }
 
-    //Override equals to compare the formulation of the question
+    //Override equals to compare the formulation and correctAnswer of the question
     @Override
     public boolean equals(Object obj) {
         if (this == obj){
@@ -58,10 +54,10 @@ public class FreeResponseQuestion implements Question{
             return false;
         }
         FreeResponseQuestion frq = (FreeResponseQuestion) obj;
-        return formulation.equalsIgnoreCase(frq.formulation);
+        return formulation.equalsIgnoreCase(frq.formulation) && correctAnswer.equalsIgnoreCase(frq.correctAnswer);
     }
 
-    public String toString() {
-        return "FreeResponseQuestion{formulation = " + formulation + ", correctAnswer = " + correctAnswer + "}";
-    }
+//    public String toString() {
+//        return "FreeResponseQuestion{formulation = " + formulation + ", correctAnswer = " + correctAnswer + "}";
+//    }
 }

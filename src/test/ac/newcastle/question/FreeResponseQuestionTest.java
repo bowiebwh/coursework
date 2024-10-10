@@ -64,6 +64,12 @@ class FreeResponseQuestionTest {
     }
 
     @Test
+    void testEquals_NullObject() {
+        // test equals method with same object
+        assertFalse(frq.equals(null));
+    }
+
+    @Test
     void testEquals_DifferentObjectSameContent() {
         // test different object but has same content
         String correctAnswer = "correct answer";

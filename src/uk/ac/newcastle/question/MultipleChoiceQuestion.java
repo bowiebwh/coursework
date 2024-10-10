@@ -68,14 +68,14 @@ public class MultipleChoiceQuestion implements Question{
     /**
      * @return options
      */
-    public List<String> getOptions() { return options; }
+//    public List<String> getOptions() { return options; }
     
     /**
      * @return correctAnswers
      */
-    public Set<String> getCorrectAnswers() {
-        return correctAnswers;
-    }
+//    public Set<String> getCorrectAnswers() {
+//        return correctAnswers;
+//    }
 
     @Override
     public boolean equals(Object o) {
@@ -90,12 +90,12 @@ public class MultipleChoiceQuestion implements Question{
         return Objects.hash(formulation, options, correctAnswers);
     }
 
-    @Override
+    /*@Override
     public String toString() {
         return "MultipleChoiceQuestion{" +
                 "formulation='" + formulation + '\'' +
                 ", options=" + options +
                 ", correctAnswers=" + correctAnswers +
                 '}';
-    }
+    }*/
 }
