@@ -43,9 +43,9 @@ public class Student {
     /**
      * @return dateOfBirth
      */
-    public Date getDateOfBirth() {
-        return dateOfBirth;
-    }
+    //public Date getDateOfBirth() {
+    //    return dateOfBirth;
+    //}
 
     /**
      * @return attemptedQuestions
@@ -101,7 +101,14 @@ public class Student {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Student student = (Student) o;
-        return Objects.equals(firstName, student.firstName) && Objects.equals(lastName, student.lastName) && Objects.equals(dateOfBirth, student.dateOfBirth);
+
+        System.out.println("Comparing firstName: " + firstName + " with " + student.firstName);
+        System.out.println("Comparing lastName: " + lastName + " with " + student.lastName);
+        System.out.println("Comparing dateOfBirth: " + dateOfBirth + " with " + student.dateOfBirth);
+
+        return Objects.equals(firstName, student.firstName) && 
+                Objects.equals(lastName, student.lastName) && 
+                Objects.equals(dateOfBirth, student.dateOfBirth);
     }
 
     @Override

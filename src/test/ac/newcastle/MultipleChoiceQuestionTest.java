@@ -1,4 +1,4 @@
-package test.ac.newcastle.question;
+package test.ac.newcastle;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

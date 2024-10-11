@@ -27,20 +27,12 @@ public class Statistics {
         this.revisionAttemptScores = new ArrayList<>();
         this.finalVerdict = Verdict.TBD;
     }
-    
-    // increase regular quiz count
-    public void incrementQuizAttemptCount(){
-        this.quizAttemptCount++;
-    }
-    
-    //increase revision quiz count
-    public void incrementRevisionAttemptCount(){
-        this.revisionAttemptCount++;
-    }
 
     //add regular quiz score
     public void addQuizScores(double score) {
         quizAttemptScores.add(score);
+        // increase regular quiz count
+        this.quizAttemptCount++;
         //update finalVerdict
         updateVerdict();
     }
@@ -48,6 +40,8 @@ public class Statistics {
     //add revision quiz count
     public void addRevisionScores(double score){
         revisionAttemptScores.add(score);
+        //increase revision quiz count
+        this.revisionAttemptCount++;
     }
 
     /**
@@ -101,7 +95,7 @@ public class Statistics {
         return finalVerdict;
     }
 
-    public String toString() {
-        return "Statistics{quizAttemptCount = " + quizAttemptCount + ", revisionAttemptCount = " + revisionAttemptCount + ", quizAttemptScores = " + quizAttemptScores + ", revisionAttemptScores = " + revisionAttemptScores + ", finalVerdict = " + finalVerdict + "}";
-    }
+    //public String toString() {
+    //    return "Statistics{quizAttemptCount = " + quizAttemptCount + ", revisionAttemptCount = " + revisionAttemptCount + ", quizAttemptScores = " + quizAttemptScores + ", revisionAttemptScores = " + revisionAttemptScores + ", finalVerdict = " + finalVerdict + "}";
+    //}
 }

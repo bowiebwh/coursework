@@ -225,7 +225,7 @@ public class QuizServiceImpl implements QuizService{
         double score = (double) correctCount / questions.size();
         
         //update statistics
-        student.getStatistics().incrementQuizAttemptCount();
+        //student.getStatistics().incrementQuizAttemptCount();
         student.getStatistics().addQuizScores(score);
 
         return score;
@@ -261,7 +261,6 @@ public class QuizServiceImpl implements QuizService{
         double score = (double) correctCount / questions.size();
 
         //update statistics
-        student.getStatistics().incrementRevisionAttemptCount();
         student.getStatistics().addRevisionScores(score);
 
         return score;
