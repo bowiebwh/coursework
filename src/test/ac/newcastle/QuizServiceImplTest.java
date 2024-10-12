@@ -49,6 +49,20 @@ public class QuizServiceImplTest {
     @Test
     void testGenerateQuiz() {
         // test generate quiz
+        // simulate question pool can not provide enough questions for a quiz
+        Exception exception1 = assertThrows(IllegalStateException.class, () -> {
+            quizService.generateQuiz(25);
+        });
+        assertEquals("The number of questions is invalid!", exception1.getMessage(), 
+                "Expected exception when trying to generate excess questions.");
+        
+        //simulate question pool can not provide 2 type of questions
+        Exception exception2 = assertThrows(IllegalStateException.class, () -> {
+            quizService.generateQuiz(0);
+        });
+        assertEquals("Not enough questions of each type to generate a valid quiz.", exception2.getMessage(),
+                "Expected exception when the question pool is not enough to provide 2 types.");
+
         List<Question> quizQuestions = quizService.generateQuiz(2);
         
         assertNotNull(quizQuestions, "Quiz questions should not be null.");
@@ -87,6 +101,13 @@ public class QuizServiceImplTest {
         assertNotNull(revisionQuestions, "Revision questions should not be null.");
         assertEquals(2, revisionQuestions.size(), "There should be 2 revision question.");
         assertEquals(List.of(questions.get(1), questions.get(2)), revisionQuestions, "The revision questions should be the one the student got wrong.");
+        
+        //simulate question pool can not provide 2 type of questions
+        Exception exception = assertThrows(IllegalStateException.class, () -> {
+            quizService.revise(newStudent,1);
+        });
+        assertEquals("Not enough questions of each type to generate a valid quiz.", exception.getMessage(),
+                "Expected exception when the question pool is not enough to provide 2 types.");
     }
     
     @Test
