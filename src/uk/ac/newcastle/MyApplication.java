@@ -15,7 +15,7 @@ import java.util.*;
  */
 public class MyApplication {
     public static void main(String[] args) {
-        Student student = new Student("Wenhao", "Bao", new Date(1995, Calendar.NOVEMBER, 15));
+        Student student = new Student("Wenhao", "Bao", new Date(1995, Calendar.OCTOBER, 15));
         QuizService quiz = new QuizServiceImpl();
         Scanner scanner = new Scanner(System.in);
 
@@ -24,7 +24,8 @@ public class MyApplication {
             if (student.hasPassed() || student.hasFailed()) {
                 break;
             }
-            System.out.println("1.regular quiz 2.revision quiz");
+            System.out.println("------------------------------");
+            System.out.println("1.regular quiz 2.revision quiz 3.exit");
             int quizType = scanner.nextInt();
             // Consume the leftover newline
             scanner.nextLine();
@@ -63,7 +64,8 @@ public class MyApplication {
 
                 String statistics = quiz.generateStatistics(student);
                 System.out.println(statistics);
-
+            }else {
+                System.exit(0);
             }
         }
         

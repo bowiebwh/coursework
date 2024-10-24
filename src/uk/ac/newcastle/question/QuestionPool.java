@@ -4,7 +4,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * @description: TODO
+ * @description: provide questions use a static Set
  * @author: Wenhao Bao
  * @date: 2024/9/29 23:07
  * @param:
@@ -16,16 +16,6 @@ public class QuestionPool{
     
     static {
         // Free Response Questions
-        /*questions.add(new FreeResponseQuestion("What's the capital of the UK?", "London"));
-        questions.add(new FreeResponseQuestion("What's the capital of China?", "Beijing"));
-        questions.add(new FreeResponseQuestion("What's the capital of the US?", "WashingtonDC"));
-        questions.add(new FreeResponseQuestion("What's the capital of Canada?", "Ottawa"));
-        questions.add(new FreeResponseQuestion("What's the capital of Czech?", "Prague"));
-        questions.add(new FreeResponseQuestion("What's the capital of Australia?", "Canberra"));
-        questions.add(new FreeResponseQuestion("What's the capital of Korea?", "Seoul"));
-        questions.add(new FreeResponseQuestion("What's the capital of Japan?", "Tokyo"));
-        questions.add(new FreeResponseQuestion("What's the capital of France?", "Paris"));
-        questions.add(new FreeResponseQuestion("What's the capital of Germany?", "Berlin"));*/
         questions.add(QuestionFactory.getInstance(QuestionFactory.FREE_RESPONSE_QUESTION + "What's the capital of the UK?" + ":London"));
         questions.add(QuestionFactory.getInstance(QuestionFactory.FREE_RESPONSE_QUESTION + "What's the capital of China?" + ":Beijing"));
         questions.add(QuestionFactory.getInstance(QuestionFactory.FREE_RESPONSE_QUESTION + "What's the capital of the US?" + ":WashingtonDC"));
@@ -38,18 +28,7 @@ public class QuestionPool{
         questions.add(QuestionFactory.getInstance(QuestionFactory.FREE_RESPONSE_QUESTION + "What's the capital of Germany?" + ":Berlin"));
         
         
-        
         // Multiple Choice Questions
-        /*questions.add(new MultipleChoiceQuestion("Which of the following are primary colors? a.Red b.Green c.Blue d.Yellow",Set.of("a","c","d")));
-        questions.add(new MultipleChoiceQuestion("Which of these animals are mammals? a.Dolphin b.Shark c.Whale d.Crocodile",Set.of("a","c")));
-        questions.add(new MultipleChoiceQuestion("Which of the following countries are in Europe? a.France b.Brazil c.Germany d.Japan",Set.of("a","c")));
-        questions.add(new MultipleChoiceQuestion("Which of these are renewable energy sources? a.Solar energy b.Coal c.Wind energy d.Natural gas",Set.of("a","c")));
-        questions.add(new MultipleChoiceQuestion("Which of the following are parts of a computer? a.Monitor b.Processor c.Keyboard d.Printer",Set.of("a","b","c","d")));
-        questions.add(new MultipleChoiceQuestion("Which of these foods are high in protein? a.Chicken b.Rice c.Fish d.Beans",Set.of("a","c","d")));
-        questions.add(new MultipleChoiceQuestion("Which of the following are programming languages? a.Python b.HTML c.Java d.SQL",Set.of("a","c","d")));
-        questions.add(new MultipleChoiceQuestion("Which of these elements are noble gases? a.Oxygen b.Helium c.Neon d.Hydrogen",Set.of("b","c")));
-        questions.add(new MultipleChoiceQuestion("Which of the following planets have rings? a.Mars b.Saturn c.Jupiter d.Uranus",Set.of("b","c","d")));
-        questions.add(new MultipleChoiceQuestion("Which of these are chemical elements? a.Hydrogen b.Water c.Oxygen d.Carbon",Set.of("a","c","d")));*/
         questions.add(QuestionFactory.getInstance(QuestionFactory.MULTIPLE_CHOICE_QUESTION 
                 + "Which of the following are primary colors?" + ":Red,Green,Blue,Yellow" + ":Red,Blue,Yellow"));
         questions.add(QuestionFactory.getInstance(QuestionFactory.MULTIPLE_CHOICE_QUESTION 
